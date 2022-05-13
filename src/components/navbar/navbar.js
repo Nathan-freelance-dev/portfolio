@@ -1,38 +1,29 @@
 import React from "react";
-import { Navbar, Container, Offcanvas, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import './navbar.scss'
 
 const MainNavbar = () => {
     return (
         <>
-            {['xxl'].map((expand) => (
-                <Navbar key={expand} bg="transparent" expand={expand} className="mb-3 fixed-top">
-                    <Container fluid>
-                        <NavLink to='/' className="text-decoration-none">
-                            <Navbar.Brand className="fw-bold text-light fs-4" href="#">
-                                Nathan
-                            </Navbar.Brand>
-                        </NavLink>
-                        <Navbar.Toggle className="border-0 shadow-none bg-light" aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar bg="transparent" className="fixed-top" expand="lg">
+                <Container>
+                    <Navbar.Brand href="#home">Nathaneil.</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto me-auto">
+                            <Nav.Link className="text-dark active" href="#home">Home</Nav.Link>
+                            <Nav.Link className="text-dark" href="#link">About</Nav.Link>
+                            <Nav.Link className="text-dark" href="#link">Skills</Nav.Link>
+                            <Nav.Link className="text-dark" href="#link">Services</Nav.Link>
+                            <Nav.Link className="text-dark" href="#link">Projects</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
 
-                        <Navbar.Offcanvas id={`offcanvasNavbar-expand-${expand}`} aria-labelledby=  {`offcanvasNavbarLabel-expand-${expand}`} placement="start">
-                            <Offcanvas.Header className="sidebar" closeButton>
-                                <Offcanvas.Title className="fw-bold fs-4 text-light" id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    Nathaniel
-                                </Offcanvas.Title>
-                            </Offcanvas.Header>
-
-                            <Offcanvas.Body className="sidebar pt-5">
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link className="text-light fs-4">Home</Nav.Link>
-                                    <Nav.Link className="text-light fs-4">About</Nav.Link>
-                                </Nav>
-                            </Offcanvas.Body>
-                        </Navbar.Offcanvas>
-                    </Container>
-                </Navbar>
-            ))}
+                    <a href="#contact" className="text-decoration-none">
+                        <Button variant="primary">Contact</Button>
+                    </a>
+                </Container>
+            </Navbar>
         </>
     )
 }

@@ -1,58 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Smokum&display=swap');
 
 body {
-    font-family: 'Josefin Sans', sans-serif !important;
-    box-sizing: border-box;
-    margin: 0%;
+    font-family: 'Roboto Flex', sans-serif !important;
     padding: 0%;
-    overflow: hidden;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 
-    .home {
-        height: 100vh;
-        background: url('./assets/image/home_img.jfif');
-        background-position: center;
-        background-size: cover;
+    .btn {
+        box-shadow: none !important;
+        &.btn-primary {
+            background: #08BDBA;
+            border-color: #08BDBA;
+        }
+    }
+
+    // hero 
+
+    .hero {
+        // padding-top: 5rem;
         display: flex;
         align-items: center;
-        width: 100vw;
-        overflow: hidden;
+        height: 100vh;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
 
         .container {
-            .home_text {
-                .typewriter {
-                    width: fit-content;
-                    
-                    h1 {
-                        font-size: 3rem;
-                        width: fit-content;
-                        overflow: hidden;
-                        border-right: .10em solid #FFFFFF;
-                        padding-right: 10px;
-                        white-space: nowrap;
-                        // margin: 0 auto;
-                        // letter-spacing: .12em;
-                        animation: 
-                          typing 3.5s steps(40, end),
-                          blink-caret 1s step-end infinite;
-                    }
-                }
+            .row {
+                .col-md-6 {
+                    .hero_text {
+                        h1 {
+                            font-family: 'Smokum', cursive;
+                            font-size: 5rem;
+                        }
 
-                h1 {
-                    font-size: 3rem;
+                        p {
+                            width: 70%;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FFFFFF; }
-  }

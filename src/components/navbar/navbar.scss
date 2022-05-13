@@ -1,3 +1,19 @@
-.sidebar {
-    background: rgb(43, 184, 209) !important;
+nav {
+    .container {
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0% 10px;
+            font-weight: 400;
+
+            &.active {
+                color: #08BDBA !important;
+            }
+        }
+    }
 }
