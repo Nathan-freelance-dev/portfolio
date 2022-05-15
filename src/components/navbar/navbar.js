@@ -1,27 +1,30 @@
 import React from "react";
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import './navbar.scss'
+import * as faIcons from 'react-icons/fa'
 
 const MainNavbar = () => {
     return (
         <>
-            <Navbar bg="transparent" className="fixed-top" expand="lg">
+            <Navbar bg="transparent" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Nathaneil.</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Brand>Nathan.</Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto me-auto">
-                            <Nav.Link className="text-dark active" href="#home">Home</Nav.Link>
-                            <Nav.Link className="text-dark" href="#link">About</Nav.Link>
-                            <Nav.Link className="text-dark" href="#link">Skills</Nav.Link>
-                            <Nav.Link className="text-dark" href="#link">Services</Nav.Link>
-                            <Nav.Link className="text-dark" href="#link">Projects</Nav.Link>
+                        <Nav className="ms-5 mt-2 me-auto">
+                            <Nav.Link className="active">Home</Nav.Link>
+                            <Nav.Link>About</Nav.Link>
+                            <Nav.Link>Skills</Nav.Link>
+                            <Nav.Link>Services</Nav.Link>
+                            <Nav.Link>Projects</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
-                    <a href="#contact" className="text-decoration-none">
-                        <Button variant="primary">Contact</Button>
-                    </a>
+                    <Nav>
+                        <Nav.Link>
+                            <faIcons.FaPhoneAlt className="me-2" /> Contact
+                        </Nav.Link>
+                    </Nav>
+                    <Navbar.Toggle className="me-5 bg-light shadow-none" aria-controls="basic-navbar-nav" />
                 </Container>
             </Navbar>
         </>

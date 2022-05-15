@@ -1,8 +1,12 @@
 nav {
+    padding-top: 30px !important;
     .container {
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: 500;
+            font-family: 'Smokum', cursive;
+            color: #5773FF !important;
+            font-size: 2.5rem;
         }
 
         .nav-link {
@@ -10,9 +14,13 @@ nav {
             padding: 0;
             margin: 0% 10px;
             font-weight: 400;
+            color: #ffffff !important;
+            font-size: 1.3rem;
+            font-family: 'Smokum', cursive;
+            letter-spacing: 2px;
 
             &.active {
-                color: #08BDBA !important;
+                color: #5773FF !important;
             }
         }
     }

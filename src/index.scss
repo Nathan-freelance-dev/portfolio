@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Smokum&display=swap');
+
 
 body {
     font-family: 'Roboto Flex', sans-serif !important;
@@ -6,41 +7,135 @@ body {
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
-
-    .btn {
-        box-shadow: none !important;
-        &.btn-primary {
-            background: #08BDBA;
-            border-color: #08BDBA;
-        }
-    }
+    width: 100vw;
+    background-color: #0E141B !important;
 
     // hero 
 
     .hero {
-        // padding-top: 5rem;
-        display: flex;
-        align-items: center;
-        height: 100vh;
-        box-sizing: border-box;
+        position: relative;
+        height: 400px;
+        background: linear-gradient(184deg, #19222cd9 40%, #7e8c9a46);
         margin: 0%;
         padding: 0%;
+        z-index: 1;
+        width: 100vw !important;
 
         .container {
-            .row {
-                .col-md-6 {
-                    .hero_text {
-                        h1 {
-                            font-family: 'Smokum', cursive;
-                            font-size: 5rem;
-                        }
+            position: relative;
+            bottom: 0%;
+            height: 100%;
 
-                        p {
-                            width: 70%;
-                        }
+            .hero_emote {
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                text-align: right;
+                bottom: 10% !important;
+
+                .dot {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0%;
+                    
+                    img {
+                        width: 35%;
                     }
+                }
+
+                .me {
+                    width: 18%;
+                    margin-right: 50px;
+                    animation: bounce 5s linear infinite;
                 }
             }
         }
+
+        .wave_svg {
+            position: absolute;
+            bottom: -1%;
+            width: 100%;
+            z-index: -1;
+
+            svg {
+                fill: #0E141B;
+                width: 100%;
+            }
+        }
+    }
+
+    // projects
+
+    .projects {
+        padding-top: 5rem;
+
+        .project_box {
+            h1 {
+                font-family: 'Junge', serif;
+                font-weight: 600;
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .text-danger {
+        color: #FF0A78 !important;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    nav {
+        position: relative;
+        .collapse {
+            background: #0E141B;
+            padding: 20px 0px !important;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0%;
+            animation: none !important;
+        }
+    }
+
+    .hero {
+        .hero_emote {
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            text-align: center !important;
+            bottom: 10% !important;
+
+            .dot {
+                position: absolute;
+                width: 100%;
+                bottom: 0%;
+                
+                img {
+                    width: 50% !important;
+                }
+            }
+
+            .me {
+                width: 25% !important;
+                margin-right: 50px;
+                animation: bounce 5s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
     }
 }
