@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Junge&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Smokum&display=swap');
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #748291; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #748291; 
+    border-radius: 10px;
+}
 
 body {
     font-family: 'Roboto Flex', sans-serif !important;
@@ -9,6 +22,8 @@ body {
     overflow-x: hidden;
     width: 100vw;
     background-color: #0E141B !important;
+
+      
 
     // hero 
 
@@ -64,17 +79,65 @@ body {
         }
     }
 
+    .form-control {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #748291 !important;
+        border-color: #748291 !important;
+        color: #FFFFFF !important;
+        font-weight: 200 !important;
+        box-shadow: none !important;
+
+        &::placeholder {
+            color: #d6d5d5;
+            font-weight: 200;
+            font-size: 1rem;
+        }
+    }
+
+    .btn {
+        border-radius: 2px;
+        padding: 10px 20px;
+        font-weight: 300;
+        background: #5773FF;
+        border-color: #5773FF;
+    }
+
     // projects
 
     .projects {
         padding-top: 5rem;
 
         .project_box {
+
+            &:hover {
+                h1 {
+                    color: #5773FF !important;
+                }
+            }
+
             h1 {
                 font-family: 'Junge', serif;
                 font-weight: 600;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 letter-spacing: 2px;
+                transition: .4s ease-in;
+            }
+
+        }
+
+        .skill_badge-content {
+            margin: 5px !important;
+            transition: .2s ease-in;
+            padding: 3px 8px;
+            background: #748291;
+            color: #FFFFFF;
+            border-radius: 8px;
+            font-weight: 100;
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
