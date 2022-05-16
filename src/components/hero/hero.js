@@ -1,6 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import MainNavbar from '../navbar/navbar'
+import { Col, Container, Row } from "react-bootstrap";
 import darkEmote from '../../assets/image/me-dark.webp'
 import dot from '../../assets/image/download.png'
 
@@ -8,9 +7,25 @@ const Hero = () => {
     return (
         <>
             <section className="hero" id="hero">
-                <MainNavbar />
-
                 <Container>
+                    <Row>
+                        <Col md={12}>
+                            <div className="hero_text">
+                                <h6 className="text-muted">
+                                    Hello 👋, I am Nathaniel
+                                </h6>
+
+                                <h1 className="text-light">
+                                    Frontend Developer
+                                </h1>
+
+                                <div className="mt-4">
+                                    <a className="btn btn-primary btn-lg" href="#contact">Say Hello</a>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+
                     <div className="hero_emote">
                         <div className="dot">
                             <img src={ dot } width="100%" alt="dot" />

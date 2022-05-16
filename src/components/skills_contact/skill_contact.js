@@ -6,7 +6,7 @@ const SkillContect = () => {
     return (
         <Col md={4} className="mt-5">
             <div className="skills_content">
-                <h5 className="text-danger text-uppercase">Skill & contact form</h5>
+                <h5 className="text-danger text-uppercase">Other Contents</h5>
 
                 <div className="skill_badge">
                     {mySkills.map((data, index) => {

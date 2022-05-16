@@ -8,7 +8,7 @@ const Projects = () => {
             <div className="projects_container mt-4">
                 {projects.map((data, idx) => {
                     return  (
-                        <a className="text-decoration-none" key={idx} href={data.path}>
+                        <a className="text-decoration-none" key={idx} target="_blank" href={data.path}>
                             <div className="project_box mt-5 text-light">
                                 <h1>
                                     {data.title}

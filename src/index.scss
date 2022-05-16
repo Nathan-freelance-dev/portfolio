@@ -41,10 +41,22 @@ body {
             bottom: 0%;
             height: 100%;
 
+            .hero_text {
+                margin-top: 10%;
+                z-index: 1 !important;
+
+                h1 {
+                    font-size: 3.3rem;
+                    font-weight: 600;
+                    font-family: 'Junge', serif;
+                    text-transform: uppercase;
+                }
+            }
+
             .hero_emote {
                 width: 100%;
                 position: absolute;
-                z-index: 1;
+                z-index: -1;
                 text-align: right;
                 bottom: 10% !important;
 
@@ -146,44 +158,78 @@ body {
         color: #FF0A78 !important;
         font-weight: 400;
     }
+
+    footer {
+        padding: 30px 0px;
+        background: #19222cd9;
+        margin-top: 50px;
+
+        .navbar-brand.text-primary {
+            font-size: 3rem;
+            font-family: 'Junge', serif;
+            line-height: 100%;
+            color: #5773FF !important;
+
+            div {
+                font-size: 1rem;
+            }
+        }
+
+        .d-flex {
+            height: 100%;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+            flex-direction: row;
+
+            .text-container {
+                width: 100%;
+            }
+
+            h2 {
+                font-weight: 400;
+                font-family: 'Junge', serif;
+            }
+
+            .text-end {
+                a {
+                    margin-right: 20px;
+                    padding: 10px;
+                    font-size: 1.5rem;
+                    color: #FFFFFF !important;
+                    background: #748291;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
-    nav {
-        position: relative;
-        .collapse {
-            background: #0E141B;
-            padding: 20px 0px !important;
-            position: absolute;
-            width: 100%;
-            top: 100%;
-            left: 0%;
-            animation: none !important;
+    .hero {
+        .hero_text {
+            margin-top: 25% !important;
+            z-index: 1 !important;
+
+            h1 {
+                font-size: 2.5rem !important;
+                font-weight: 600;
+                font-family: 'Junge', serif;
+                text-transform: uppercase;
+            }
+        }
+
+        .hero_emote {
+            display: none;
         }
     }
 
-    .hero {
-        .hero_emote {
-            width: 100%;
-            position: absolute;
-            z-index: 1;
-            text-align: center !important;
-            bottom: 10% !important;
+    footer {
+        .d-flex {
+            flex-direction: column !important;
 
-            .dot {
-                position: absolute;
-                width: 100%;
-                bottom: 0%;
-                
-                img {
-                    width: 50% !important;
-                }
-            }
-
-            .me {
-                width: 25% !important;
-                margin-right: 50px;
-                animation: bounce 5s linear infinite;
+            .text-end {
+                text-align: left !important;
             }
         }
     }
