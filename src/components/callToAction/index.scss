@@ -1,0 +1,26 @@
+.cta {
+     border-radius: 0%;
+     padding: 10px 25px;
+     position: relative;
+     background: transparent !important;
+     z-index: 1;
+     transition: .2s ease-in;
+     border-bottom: 1px solid #222 !important;
+     border: 0ch;
+
+     &::after {
+          content: '';
+          position: absolute;
+          height: 0%;
+          width: 100%;
+          background: #222;
+          left: 0%;
+          bottom: 0%;
+          z-index: -1;
+          transition: .2s ease-in;
+     }
+
+     &:hover::after {
+          height: 100%;
+     }
+}
