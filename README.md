@@ -1,3 +1,6 @@
+# Project image
+![portfolio image](src/assets/images/portolio_md.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
