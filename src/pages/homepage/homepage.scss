@@ -182,3 +182,44 @@
           }
      }
 }
+
+.blog_container {
+     padding: 100px 0px;
+
+     .blog_post {
+          height: 200px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &.blog_post-1 {
+               background-image: url('../../assets/images/download.jfif');
+          }
+
+          &.blog_post-2 {
+               background-image: url('../../assets/images/portolio_md.png');
+               border: 1px solid #222;
+          }
+
+          &.blog_post-3 {
+               background-image: url('../../assets/images/photo-1517694712202-14dd9538aa97.avif');
+          }
+     }
+
+     @media screen and (max-width: 425px) {
+          .col-md-4 {
+               margin-bottom: 20px;
+          }
+     }
+}
+
+.contact_container {
+     background-color: #111;
+     padding: 100px 0px;
+
+     h1 {
+          font-size: 3.5rem;
+          font-weight: 300;
+          text-transform: uppercase;
+     }
+}

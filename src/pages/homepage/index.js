@@ -4,6 +4,8 @@ import Hero from '../../components/hero'
 import './homepage.scss'
 import Services from '../../components/service'
 import Projects from '../../components/projects'
+import Blog from '../../components/blog'
+import Contact from '../../components/contact'
 
 const Homepage = () => {
      return (
@@ -12,6 +14,8 @@ const Homepage = () => {
                <Hero />
                <Services />
                <Projects />
+               <Blog />
+               <Contact />
           </>
      )
 }
