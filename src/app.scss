@@ -6,4 +6,9 @@ body {
      overflow-x: hidden;
      box-sizing: border-box;
      font-family: 'Source Sans Pro', sans-serif !important;
+
+     button, a {
+          outline: none !important;
+          box-shadow: none !important;
+     }
 }

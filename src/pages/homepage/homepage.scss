@@ -57,7 +57,15 @@
                margin-top: 50px !important;
 
                h1 {
-                    font-size: 2.5rem;
+                    font-size: 2.2rem;
+               }
+
+               .d-flex {
+                    flex-direction: column;
+
+                    button {
+                         width: 100%;
+                    }
                }
           }
      }
@@ -79,6 +87,98 @@
 
           @media screen and (max-width: 425px) {
                margin-bottom: 20px;
+          }
+     }
+}
+
+.projects_container {
+     padding: 100px 0px;
+
+     .container {
+          h1 {
+               font-size: 3.5rem;
+               font-weight: 300;
+          }
+
+          .projects {
+               &:hover {
+                    .details {
+                         opacity: 1;
+                    }
+               }
+
+               .details {
+                    position: absolute;
+                    bottom: 0%;
+                    margin: 25px 10px;
+                    opacity: 0;
+                    transition: .3s ease-in;
+
+                    h2 {
+                         width: fit-content;
+                         text-transform: uppercase;
+                    }
+
+                    div {
+                         width: fit-content;
+                    }
+               }
+
+               &.portfolio_project {
+                    height: 600px;
+                    background: url('../../assets/images/photo-1507238691740-187a5b1d37b8.avif');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+               }
+
+               &.joyce_project {
+                    height: 300px;
+                    background: url('../../assets/images/photo-1634449571010-02389ed0f9b0.avif');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    margin-top: 10px;
+               }
+
+               &.trust_project {
+                    height: 300px;
+                    background: url('../../assets/images/photo-1621761225597-32b61662062f.avif');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    margin-top: 10px;
+               }
+
+               &.cnn_project {
+                    height: 600px;
+                    background: url('../../assets/images/photo-1588681664899-f142ff2dc9b1.avif');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    margin-top: -270px;
+               }
+          }
+
+          @media screen and (max-width: 768px) {
+               h1 {
+                    font-size: 2.5rem;
+               }
+
+               .projects{
+                    height: 300px !important;
+                    margin-top: 20px !important;
+               }
+          }
+
+          @media screen and (max-width: 375px) {
+               h1 {
+                    font-size: 2rem;
+               }
           }
      }
 }
