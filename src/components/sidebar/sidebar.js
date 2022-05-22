@@ -5,7 +5,7 @@ import './index.scss'
 const Sidebar = () => {
      return (
           <>
-               <aside className='sidebar-menu'>
+               <aside className='sidebar-menu shadow'>
                     {mySidebarData.map((data, index) => {
                          return (
                               <a className="text-decoration-none" href={data.path} key={index}>
