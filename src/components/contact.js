@@ -1,10 +1,30 @@
-import React from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import React, { useRef, useState } from 'react';
+import emailjs, { EmailJSResponseStatus, sendForm } from 'emailjs-com';
+import { Col, Container, Row, Button, Toast } from "react-bootstrap";
 import Map from "./map";
 import * as fiIcons from 'react-icons/fi'
 import * as bsIcons from 'react-icons/bs'
 
 const Contact = () => {
+     const form = useRef();
+
+     const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm('service_4ga8ugv', 'template_d29k7ur', form.current, '0l8rCYMY6l7VfEi2u')
+               .then((result) => {
+                    console.log(result);
+
+                    let worked = true
+               }, (error) => {
+                    console.log(error.text);
+               });
+     };
+
+     const [showA, setShowA] = useState(false);
+
+     const toggleShowA = () => setShowA(!showA);
+
      return (
           <>
                <Map />
@@ -15,11 +35,11 @@ const Contact = () => {
                                    <div className="text-light">
                                         <h1>Get in touch</h1>
                                         <div className="mt-3">
-                                             <a href="#" className='text-decoration-none btn btn-socials'>
+                                             <a href="https://twitter.com/bigNath0128" target={'_blank'} className='text-decoration-none btn btn-socials'>
                                                   <fiIcons.FiTwitter />
                                              </a>
 
-                                             <a className="text-decoration-none btn btn-socials" href="#">
+                                             <a className="text-decoration-none btn btn-socials" href="https://github.com/Nathan-freelance-dev" target={'_blank'}>
                                                   <fiIcons.FiGithub />
                                              </a>
 
@@ -53,29 +73,27 @@ const Contact = () => {
                               </Col>
 
                               <Col md={8}>
-                                   <form action="" method="post">
+                                   <form ref={form} onSubmit={sendEmail}>
                                         <Row>
                                              <Col md={6}>
-                                                  <input className="form-control text-light" placeholder="Full name" type={'text'} />
+                                                  <input className="form-control text-light" placeholder="Full name" name='user_name' required type={'text'} />
                                              </Col>
 
                                              <Col md={6}>
-                                                  <input className="form-control text-light" placeholder="Email address" type={'email'} />
+                                                  <input className="form-control text-light" placeholder="Email address" name='user_email' required type={'email'} />
                                              </Col>
                                         </Row>
 
                                         <div className="mt-4">
-                                             <input className="form-control text-light" placeholder="Subject" type={'text'} />
+                                             <input className="form-control text-light" placeholder="Subject" type={'text'} required name='subject' />
                                         </div>
 
                                         <div className="mt-4">
-                                             <textarea className="form-control text-light" placeholder="Message" rows={'7'}></textarea>
+                                             <textarea className="form-control text-light" placeholder="Message" required name='message' rows={'7'}></textarea>
                                         </div>
 
                                         <div className="text-end mt-4">
-                                             <Button variant="outline-light">
-                                                  Submit message
-                                             </Button>
+                                             <input type="submit" value="Send message" className='btn btn-outline-light' />
                                         </div>
                                    </form>
                               </Col>
@@ -86,6 +104,17 @@ const Contact = () => {
                                    <bsIcons.BsArrowUp />
                               </Button>
                          </a>
+
+                         {/* toast message bug not fixed */}
+
+                         <Toast show={showA} onClose={toggleShowA}>
+                              <Toast.Header>
+                                   <bsIcons.BsBell className='me-2' /> 
+                                   <strong className="me-auto">Notification</strong>
+                                   <small>now</small>
+                              </Toast.Header>
+                              <Toast.Body>Message sent successfully</Toast.Body>
+                         </Toast>
                     </Container>
                </section>
           </>

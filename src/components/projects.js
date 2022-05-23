@@ -31,9 +31,11 @@ const Projects = () => {
                          </Row>
 
                          <div className='mt-4'>
-                              <CallToAction 
-                                   text={"See more projects"}
-                              />
+                              <a className='text-decoration-none' href='https://github.com/Nathan-freelance-dev?tab=repositories' target={'_blank'}>
+                                   <CallToAction 
+                                        text={"See more projects"}
+                                   />
+                              </a>
                          </div>
                     </Container>
                </section>

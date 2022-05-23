@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import HeroImage from '../assets/images/hero-img.jpg'
 import CallToAction from "./callToAction/callToAction";
 import * as bsIcons from 'react-icons/bs'
+import resume from '../assets/resume/Resume.pdf'
 
 const Hero = () => {
      return (
@@ -29,18 +30,22 @@ const Hero = () => {
                                         </h1>
 
                                         <p className="mt-3 text-muted fw-light">
-                                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                             I am a front-end website developer with over 3years of experience, I have the necessary skills needed from a front-end web developer, these skills include: HLML, CSS, JAVASCRIPT, Node.js, React.js, Bootstrap, SCSS, I also use tools like: Github.
                                         </p>
 
                                         <div className="mt-3 text-muted fw-light d-flex">
-                                             <div className="ms-2">
-                                                  <CallToAction 
-                                                       text={"Say hello!"}
-                                                  />
+                                             <div>
+                                                  <a className="text-decoration-none" href="#contact">
+                                                       <CallToAction 
+                                                            text={"Say hello!"}
+                                                       />
+                                                  </a>
                                              </div>
 
-                                             <div className="p-3">
-                                                  <span>Coding / Designing / Hosting</span>
+                                             <div className="ms-3">
+                                                  <a href={resume} download className="text-decoration-none cta btn btn-outline-dark btn-lg">
+                                                       Download Resume
+                                                  </a>
                                              </div>
                                         </div>
                                    </div>

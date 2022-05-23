@@ -64,10 +64,25 @@
                     flex-direction: column;
 
                     button {
+                         width: 100% !important;
+                    }
+
+                    .btn {
                          width: 100%;
+                    }
+
+                    .ms-3 {
+                         margin-left: 0% !important;
+                         margin-top: 20px !important;
                     }
                }
           }
+     }
+}
+
+@media screen and (max-width: 425px) {
+     section {
+          padding: 50px 0px !important;
      }
 }
 
@@ -277,6 +292,11 @@
           &:hover::after {
                height: 100%;
           }
+     }
+
+     input.btn {
+          color: #fff !important;
+          box-shadow: none !important;
      }
 
      @media screen and (max-width: 768px) {
