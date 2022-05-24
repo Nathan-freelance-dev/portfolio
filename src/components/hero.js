@@ -29,7 +29,7 @@ const Hero = () => {
                                              Frontend Developer based in Nigeria
                                         </h1>
 
-                                        <p className="mt-3 text-muted fw-light">
+                                        <p className="mt-3 text-muted">
                                              I am a front-end website developer with over 3years of experience, I have the necessary skills needed from a front-end web developer, these skills include: HLML, CSS, JAVASCRIPT, Node.js, React.js, Bootstrap, SCSS, I also use tools like: Github.
                                         </p>
 

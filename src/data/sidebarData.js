@@ -22,12 +22,6 @@ export const mySidebarData = [
      },
 
      {
-          className: 'sidebar_link',
-          path: '#blog',
-          icon: <bsIcons.BsPen />
-     },
-
-     {
           className: 'sidebar_link-last',
           path: "#contact",
           icon: <goIcons.GoMail />

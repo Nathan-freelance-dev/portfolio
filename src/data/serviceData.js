@@ -6,20 +6,20 @@ export const serviceDataObj = [
           colSystem: 4,
           icon: <bsIcons.BsCodeSlash />,
           title: 'Coding',
-          detail: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+          detail: "You write code to tell the computer what to do. e.g: print(\"Hello, world\"), gives us \"Hello world \"."
      },
 
      {    
           colSystem: 4,
           icon: <siIcons.SiMaterialdesign />,
           title: 'Designing',
-          detail: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+          detail: "A design is a plan or specification for the construction of an object or system."
      },
 
      {
           colSystem: 4,
           icon: <bsIcons.BsCloudUpload />,
           title: 'Hosting',
-          detail: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+          detail: "Web hosting providers get your website live on the internet for the world."
      },
 ]

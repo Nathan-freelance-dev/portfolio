@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
-import emailjs, { EmailJSResponseStatus, sendForm } from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import { Col, Container, Row, Button, Toast } from "react-bootstrap";
 import Map from "./map";
 import * as fiIcons from 'react-icons/fi'
 import * as bsIcons from 'react-icons/bs'
+import * as siIcons from 'react-icons/si'
 
 const Contact = () => {
      const form = useRef();
@@ -14,8 +15,6 @@ const Contact = () => {
           emailjs.sendForm('service_4ga8ugv', 'template_d29k7ur', form.current, '0l8rCYMY6l7VfEi2u')
                .then((result) => {
                     console.log(result);
-
-                    let worked = true
                }, (error) => {
                     console.log(error.text);
                });
@@ -43,12 +42,12 @@ const Contact = () => {
                                                   <fiIcons.FiGithub />
                                              </a>
 
-                                             <a className="text-decoration-none btn btn-socials" href="#">
-                                                  <bsIcons.BsWhatsapp />
+                                             <a className="text-decoration-none btn btn-socials" href="https://www.linkedin.com/in/nathaniel-joesph-50780423b/" target={'_blank'}>
+                                                  <bsIcons.BsLinkedin />
                                              </a>
                                              
-                                             <a className="text-decoration-none btn btn-socials" href="#">
-                                                  <fiIcons.FiMail />
+                                             <a className="text-decoration-none btn btn-socials" href="https://www.upwork.com/freelancers/~01e62025b83e0b0aa5" target={'_blank'}>
+                                                  <siIcons.SiUpwork />
                                              </a>
                                              
                                         </div>
@@ -93,7 +92,7 @@ const Contact = () => {
                                         </div>
 
                                         <div className="text-end mt-4">
-                                             <input type="submit" value="Send message" className='btn btn-outline-light' />
+                                             <input value="Send message" type="submit" className='btn btn-outline-light' />
                                         </div>
                                    </form>
                               </Col>
@@ -107,14 +106,14 @@ const Contact = () => {
 
                          {/* toast message bug not fixed */}
 
-                         <Toast show={showA} onClose={toggleShowA}>
+                         {/* <Toast show={showA} onClose={toggleShowA}>
                               <Toast.Header>
                                    <bsIcons.BsBell className='me-2' /> 
                                    <strong className="me-auto">Notification</strong>
                                    <small>now</small>
                               </Toast.Header>
                               <Toast.Body>Message sent successfully</Toast.Body>
-                         </Toast>
+                         </Toast> */}
                     </Container>
                </section>
           </>

@@ -14,17 +14,19 @@ const Projects = () => {
                               {myProjectsData.map((data, index) => {
                                    return (
                                         <Col md={data.colSystem} key={index}>
-                                             <div className={data.className}>
-                                                  <div className='details'>
-                                                       <h2 className='text-light bg-dark p-2'>
-                                                            {data.projectTitle}
-                                                       </h2>
+                                             <a className='text-decoration-none' target={'_blank'} href={data.path}>
+                                                  <div className={data.className}>
+                                                       <div className='details'>
+                                                            <h2 className='text-light bg-dark p-2'>
+                                                                 {data.projectTitle}
+                                                            </h2>
 
-                                                       <div className='text-light bg-dark p-2'>
-                                                            {data.tools}
+                                                            <div className='text-light bg-dark p-2'>
+                                                                 {data.tools}
+                                                            </div>
                                                        </div>
                                                   </div>
-                                             </div>
+                                             </a>
                                         </Col>
                                    )
                               })}
