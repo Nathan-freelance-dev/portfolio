@@ -1,32 +1,35 @@
+
+
 export const myProjectsData = [
      {
-          className: "portfolio_project projects",
+          className: "border border-dark border-2",
+          detailedText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum, numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
           projectTitle: "Nathan - portfolio",
-          tools: "Bootstrap - React.js",
           colSystem: 6,
-          path: "https://github.com/Nathan-freelance-dev/portfolio"
+          path: "https://github.com/Nathan-freelance-dev/portfolio",
+          img: ""
      },
 
      {
-          className: "joyce_project projects",
-          projectTitle: "Joyce",
-          tools: "Bootstrap - React.js",
+          className: "border border-dark border-2",
+          detailedText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum, numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+          projectTitle: "Joyce - Hair salon",
           colSystem: 6,
           path: "https://github.com/Nathan-freelance-dev/joyce"
      },
      
      {
-          className: "trust_project projects",
-          projectTitle: "Trust wallet",
-          tools: "Bootstrap - CSS",
+          className: "border border-dark border-2 mt-3",
+          detailedText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum, numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+          projectTitle: "Todo app - JS Personal project",
           colSystem: 6,
           path: "https://trustwalet.netlify.app/"
      },
 
      {
-          className: "cnn_project projects",
-          projectTitle: "Cnn Clone",
-          tools: "Bootstrap - CSS",
+          className: "border border-dark border-2 mt-3",
+          detailedText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum, numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+          projectTitle: "CNN - Cloned website",
           colSystem: 6,
           path: "https://cnnclone.netlify.app/"
      }
