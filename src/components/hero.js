@@ -26,11 +26,11 @@ const Hero = () => {
                                         <h6 className="fw-normal">I'M NATHANIEL JOSEPH</h6>
 
                                         <h1 className="mt-4 text-uppercase">
-                                             Frontend Developer based in Nigeria
+                                             Frontend Developer based in Nigeria.
                                         </h1>
 
                                         <p className="mt-3 text-muted">
-                                             I am a front-end website developer with over 3years of experience, I have the necessary skills needed from a front-end web developer, these skills include: HLML, CSS, JAVASCRIPT, Node.js, React.js, Bootstrap, SCSS, I also use tools like: Github.
+                                             I am a front-end website developer with over 3years of experience, I have the necessary skills needed from a front-end web developer, these skills include: HTML, CSS, JAVASCRIPT, Node.js, React.js, Bootstrap, SCSS, I also use tools like: Github.
                                         </p>
 
                                         <div className="mt-3 text-muted fw-light d-flex">
@@ -44,7 +44,7 @@ const Hero = () => {
 
                                              <div className="ms-3">
                                                   <a href={resume} download className="text-decoration-none cta btn btn-outline-dark btn-lg">
-                                                       Download Resume
+                                                       <bsIcons.BsCloudArrowDown className="me-2" /> Resume
                                                   </a>
                                              </div>
                                         </div>
