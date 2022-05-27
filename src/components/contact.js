@@ -112,7 +112,7 @@ const Contact = () => {
                          </Row>
 
                          <a className="text-decoration-none" href="#">
-                              <Button variant="outline-light position-absolute bottom-0 start-0 fs-3 ms-3 mb-3">
+                              <Button variant="outline-light position-absolute bottom-0 end-0 fs-3 me-3 mb-3">
                                    <bsIcons.BsArrowUp />
                               </Button>
                          </a>
