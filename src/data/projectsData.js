@@ -12,7 +12,8 @@ export const myProjectsData = [
           path: "https://github.com/Nathan-freelance-dev/portfolio",
           img: MyPortfolio,
           imageClass: "border-bottom border-dark border-2",
-          altText: "Nathaniel's project"
+          altText: "Nathaniel's project",
+          learnMore: "/portfolio"
      },
 
      {
