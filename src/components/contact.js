@@ -6,15 +6,28 @@ import * as fiIcons from 'react-icons/fi'
 import * as bsIcons from 'react-icons/bs'
 import * as siIcons from 'react-icons/si'
 
+const date = new Date();
+
+const year = date.getFullYear();
+
 const Contact = () => {
      const form = useRef();
 
      const sendEmail = (e) => {
           e.preventDefault();
-      
+
           emailjs.sendForm('service_4ga8ugv', 'template_d29k7ur', form.current, '0l8rCYMY6l7VfEi2u')
                .then((result) => {
-                    console.log(result);
+                    if (result.text === "OK") {
+                         <Toast show={showA} onClose={toggleShowA}>
+                              <Toast.Header>
+                                   <bsIcons.BsBell className='me-2' /> 
+                                   <strong className="me-auto">Notification</strong>
+                                   <small>now</small>
+                              </Toast.Header>
+                              <Toast.Body>Message sent successfully</Toast.Body>
+                         </Toast>
+                    }
                }, (error) => {
                     console.log(error.text);
                });
@@ -34,19 +47,19 @@ const Contact = () => {
                                    <div className="text-light">
                                         <h1>Get in touch</h1>
                                         <div className="mt-3">
-                                             <a href="https://twitter.com/bigNath0128" target={'_blank'} className='text-decoration-none btn btn-socials'>
+                                             <a rel="noreferrer" href="https://twitter.com/bigNath0128" target={'_blank'} className='text-decoration-none btn btn-socials'>
                                                   <fiIcons.FiTwitter />
                                              </a>
 
-                                             <a className="text-decoration-none btn btn-socials" href="https://github.com/Nathan-freelance-dev" target={'_blank'}>
+                                             <a rel="noreferrer" className="text-decoration-none btn btn-socials" href="https://github.com/Nathan-freelance-dev" target={'_blank'}>
                                                   <fiIcons.FiGithub />
                                              </a>
 
-                                             <a className="text-decoration-none btn btn-socials" href="https://www.linkedin.com/in/nathaniel-joesph-50780423b/" target={'_blank'}>
+                                             <a rel="noreferrer" className="text-decoration-none btn btn-socials" href="https://www.linkedin.com/in/nathaniel-joesph-50780423b/" target={'_blank'}>
                                                   <bsIcons.BsLinkedin />
                                              </a>
                                              
-                                             <a className="text-decoration-none btn btn-socials" href="https://www.upwork.com/freelancers/~01e62025b83e0b0aa5" target={'_blank'}>
+                                             <a rel="noreferrer" className="text-decoration-none btn btn-socials" href="https://www.upwork.com/freelancers/~01e62025b83e0b0aa5" target={'_blank'}>
                                                   <siIcons.SiUpwork />
                                              </a>
                                              
@@ -99,21 +112,27 @@ const Contact = () => {
                          </Row>
 
                          <a className="text-decoration-none" href="#">
-                              <Button variant="outline-light position-absolute bottom-0 end-0 me-3 mb-3">
+                              <Button variant="outline-light position-absolute bottom-0 start-0 fs-3 ms-3 mb-3">
                                    <bsIcons.BsArrowUp />
                               </Button>
                          </a>
 
                          {/* toast message bug not fixed */}
 
-                         {/* <Toast show={showA} onClose={toggleShowA}>
-                              <Toast.Header>
-                                   <bsIcons.BsBell className='me-2' /> 
-                                   <strong className="me-auto">Notification</strong>
-                                   <small>now</small>
-                              </Toast.Header>
-                              <Toast.Body>Message sent successfully</Toast.Body>
-                         </Toast> */}
+                         {/* { sendForm === "sendForm" ? 
+                              <Toast show={showA} onClose={toggleShowA}>
+                                   <Toast.Header>
+                                        <bsIcons.BsBell className='me-2' /> 
+                                        <strong className="me-auto">Notification</strong>
+                                        <small>now</small>
+                                   </Toast.Header>
+                                   <Toast.Body>Message sent successfully</Toast.Body>
+                              </Toast>
+                         : ""} */}
+
+                         <div className='text-center text-muted'>
+                              &copy; {year}, All rights reserved.
+                         </div>
                     </Container>
                </section>
           </>
