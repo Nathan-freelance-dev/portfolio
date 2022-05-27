@@ -13,7 +13,7 @@ const Projects = () => {
                          <Row className='mt-3'>
                               {myProjectsData.map((data, index) => {
                                    return (
-                                        <Col md={data.colSystem} key={index}>
+                                        <Col md={data.colSystem} className="mt-3" key={index}>
                                              <div className={data.className}>
                                                   <div className={data.imageClass}>
                                                        <img src={data.img} alt={data.altText} className="w-100 h-100 d-block" />
