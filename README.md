@@ -1,5 +1,6 @@
-# Project image
-![portfolio image](src/assets/images/portolio_md.png)
+# Project Details
+<!-- ![portfolio image](src/assets/images/portolio_md.png) -->
+This is my personal website project made primarily with `React.js`, this is to showcase my frontend skills to <br /> possible clients.
 
 # Getting Started with Create React App
 
