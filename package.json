@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://nathan-freelance-dev.github.io/portfolio/portfolio",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
