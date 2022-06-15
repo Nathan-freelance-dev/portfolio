@@ -11,7 +11,7 @@ const Services = () => {
                               {serviceDataObj.map((data, index) => {
                                    return (
                                         <Col md={data.colSystem} key={index}>
-                                             <div className="p-5 border text-dark">
+                                             <div className="p-4 border text-dark">
                                                   <h1>
                                                        {data.icon}
                                                   </h1>

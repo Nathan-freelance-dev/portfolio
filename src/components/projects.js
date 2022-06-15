@@ -33,7 +33,13 @@ const Projects = () => {
                                                   <div className='border-top p-3 text-end'>
                                                        <a className='text-decoration-none' href={data.path} target={"_blank"} rel="noreferrer">
                                                             <button className='btn ms-3 btn-outline-dark cta btn-lg'>
-                                                                 View demo
+                                                                 Visit site
+                                                            </button>
+                                                       </a>
+
+                                                       <a className='text-decoration-none' href={data.gitPath} target={"_blank"} rel="noreferrer">
+                                                            <button className='btn ms-3 btn-outline-dark cta btn-lg'>
+                                                                 Github
                                                             </button>
                                                        </a>
                                                   </div>

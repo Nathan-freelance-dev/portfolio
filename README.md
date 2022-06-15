@@ -1,5 +1,9 @@
 # Project image
-![portfolio image](src/assets/images/portolio_md.png)
+![portfolio image](src/assets/images/portolio_img.png)
+
+# Project description
+
+This is a personal portfolio project that was built mainly with `react.js`, `react-bootstrap`, `SCSS` and also used react hooks such as `useState`. This project was completed with the time range of roughly 2 weeks, it was developed by me to showcase my skills as a front-end website developer who is living in Nigeria. As a front-end website developer I am mainly interested in the design aspect of a website although I use backend api(s) in most of my projects ¯\_(ツ)_/¯.
 
 # Getting Started with Create React App
 

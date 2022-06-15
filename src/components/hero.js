@@ -17,10 +17,6 @@ const Hero = () => {
                          </a>
 
                          <Row>
-                              {/* <Col md={4}>
-                                   <img width={'100%'} alt={"software developer"} src={HeroImage} />
-                              </Col> */}
-
                               <Col md={12}>
                                    <div className="hero_text mt-5 text-dark">
                                         <h5 className="fw-normal">I'M NATHANIEL JOSEPH</h5>
@@ -30,21 +26,21 @@ const Hero = () => {
                                         </h1>
 
                                         <p className="mt-3 text-muted">
-                                             I am a front-end website developer with over 3years of experience, I have the necessary skills needed from a front-end web developer, these skills include: HTML, CSS, JAVASCRIPT, Node.js, React.js, Bootstrap, SCSS, I also use tools like: Github.
+                                             As a front-end website developer with over 2years of experience, I have the necessary skills needed from a front-end web developer, which includes: HTML, CSS, JAVASCRIPT. I also use tools like: Github, React.js, SCSS, Bootstrap and React-bootstrap.
                                         </p>
 
                                         <div className="mt-5 text-muted fw-light d-flex">
                                              <div>
                                                   <a className="text-decoration-none" href="#contact">
                                                        <CallToAction 
-                                                            text={"Say hello right now!"}
+                                                            text={"Say hello!"}
                                                        />
                                                   </a>
                                              </div>
 
                                              <div className="ms-3">
                                                   <a href={resume} download className="text-decoration-none cta btn btn-outline-dark btn-lg">
-                                                       <bsIcons.BsCloudArrowDown className="me-2" /> Download Resume
+                                                       <bsIcons.BsCloudArrowDown className="me-2" />Resume
                                                   </a>
                                              </div>
                                         </div>
