@@ -1,0 +1,87 @@
+.about_sidebar_info {
+    width: 22%;
+    background-color: #20202a !important;
+    position: fixed;
+    // height: 100%;
+    left: 10px;
+    bottom: 10px;
+    top: 10px;
+
+    .about_info_box {
+        background-color: #24242f98 !important;
+        backdrop-filter: blur(20px);
+    }
+
+    .pie {
+        --p:99;
+        --c:orange;
+        // --p:20;
+        --b:5px;
+        // --c:darkred;
+        --w:60px;
+
+        width:var(--w);
+        aspect-ratio:1;
+        position:relative;
+        display:inline-grid;
+        margin:5px;
+        place-content:center;
+        font-size: .8rem;
+        font-weight:bold;
+        font-family:sans-serif;
+
+        &.css {
+            --p: 95;
+        }
+
+        &.js {
+            --p: 70;
+        }
+
+        &.react {
+            --p:60;
+        }
+
+        &.py {
+            --p: 30;
+        }
+    }
+
+    .pie:before,
+.pie:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.pie:before {
+  inset:0;
+  background:
+    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+  inset:calc(50% - var(--b)/2);
+  background:var(--c);
+  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+.animate {
+  animation:p 1s .5s both;
+}
+.no-round:before {
+  background-size:0 0,auto;
+}
+.no-round:after {
+  content:none;
+}
+@keyframes p {
+  from{--p:0}
+}
+}
+
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
